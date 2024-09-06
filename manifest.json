@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "X-Post-Filter",
+  "version": "1.0",
+  "description": "Analyzes and filters content on X.com based on configured topics",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://x.com/*",
+    "https://api.groq.com/*"
+  ],
+  "action": {
+    "default_popup": "options.html",
+    "default_width": 500,
+    "default_height": 600
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://x.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
